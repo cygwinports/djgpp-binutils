@@ -1,0 +1,77 @@
+--- origsrc/binutils-2.24/bfd/configure	2013-12-02 03:30:30.000000000 -0600
++++ src/binutils-2.24/bfd/configure	2014-12-10 12:18:10.420255800 -0600
+@@ -3990,7 +3990,7 @@ fi
+ 
+ 
+ # Define the identity of the package.
+- PACKAGE='bfd'
++ PACKAGE=djgpp-bfd
+  VERSION='2.24'
+ 
+ 
+--- origsrc/binutils-2.24/binutils/configure	2013-11-04 09:33:37.000000000 -0600
++++ src/binutils-2.24/binutils/configure	2014-12-10 12:18:10.435256700 -0600
+@@ -3738,7 +3738,7 @@ fi
+ 
+ 
+ # Define the identity of the package.
+- PACKAGE=binutils
++ PACKAGE=djgpp-binutils
+  VERSION=${BFD_VERSION}
+ 
+ 
+--- origsrc/binutils-2.24/gas/configure	2014-12-10 12:12:47.386779300 -0600
++++ src/binutils-2.24/gas/configure	2014-12-10 12:18:10.448257400 -0600
+@@ -3721,7 +3721,7 @@ fi
+ 
+ 
+ # Define the identity of the package.
+- PACKAGE=gas
++ PACKAGE=djgpp-gas
+  VERSION=${BFD_VERSION}
+ 
+ 
+--- origsrc/binutils-2.24/gold/configure	2013-11-08 04:13:48.000000000 -0600
++++ src/binutils-2.24/gold/configure	2014-12-10 12:18:10.456257900 -0600
+@@ -3184,7 +3184,7 @@ fi
+ 
+ 
+ # Define the identity of the package.
+- PACKAGE='gold'
++ PACKAGE='djgpp-gold'
+  VERSION='0.1'
+ 
+ 
+--- origsrc/binutils-2.24/gprof/configure	2013-11-04 09:33:39.000000000 -0600
++++ src/binutils-2.24/gprof/configure	2014-12-10 12:18:10.468258600 -0600
+@@ -3647,7 +3647,7 @@ fi
+ 
+ 
+ # Define the identity of the package.
+- PACKAGE=gprof
++ PACKAGE=djgpp-gprof
+  VERSION=${BFD_VERSION}
+ 
+ 
+--- origsrc/binutils-2.24/ld/configure	2013-11-04 09:33:39.000000000 -0600
++++ src/binutils-2.24/ld/configure	2014-12-10 12:18:10.480259200 -0600
+@@ -4056,7 +4056,7 @@ fi
+ 
+ 
+ # Define the identity of the package.
+- PACKAGE=ld
++ PACKAGE=djgpp-ld
+  VERSION=${BFD_VERSION}
+ 
+ 
+--- origsrc/binutils-2.24/opcodes/configure	2013-11-04 09:33:40.000000000 -0600
++++ src/binutils-2.24/opcodes/configure	2014-12-10 12:18:10.494260000 -0600
+@@ -3717,7 +3717,7 @@ fi
+ 
+ 
+ # Define the identity of the package.
+- PACKAGE=opcodes
++ PACKAGE=djgpp-opcodes
+  VERSION=${BFD_VERSION}
+ 
+ 

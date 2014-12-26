@@ -2,7 +2,7 @@ TOOLCHAIN_TARGET="i586-pc-msdosdjgpp"
 inherit toolchain
 
 NAME="djgpp-binutils"
-VERSION=2.24
+VERSION=2.25
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="Binutils for DJGPP toolchain"
@@ -10,13 +10,10 @@ DESCRIPTION="Assember, linker, and other binary utilities required for the
 DJGPP cross-compiling toolchain"
 HOMEPAGE="http://www.gnu.org/software/binutils/"
 SRC_URI="http://www.delorie.com/pub/djgpp/current/v2gnu/bnu${VERSION//\.}s.zip"
-SRC_DIR="gnu/bnutl-${VERSION}"
+SRC_DIR="gnu/binutils-${VERSION}"
 PATCH_URI="
-	http://pkgs.fedoraproject.org/cgit/binutils.git/plain/binutils-2.24-corrupt-binaries.patch
-	http://pkgs.fedoraproject.org/cgit/binutils.git/plain/binutils-2.24-strings-default-all.patch
-	http://pkgs.fedoraproject.org/cgit/binutils.git/plain/binutils-2.24-corrupt-ar.patch
 	2.21.1a-Wimplicit-decls.patch
-	2.24-textdomain.patch
+	2.25-textdomain.patch
 "
 
 CYGCONF_ARGS="--disable-werror"
@@ -24,6 +21,10 @@ CYGCONF_ARGS="--disable-werror"
 CYGPORT_USE_UNSTABLE_API=1
 src_unpack_hook() {
 	chmod +x configure */configure mkinstalldirs
+	for f in */config.in
+	do
+		echo "#define STRIP_FULL_PATH_AND_EXTENSION(x) (x)" >> $f
+	done
 }
 
 src_compile() {

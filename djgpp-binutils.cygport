@@ -3,7 +3,7 @@ inherit toolchain
 
 NAME="djgpp-binutils"
 VERSION=2.25
-RELEASE=1
+RELEASE=2
 CATEGORY="Devel"
 SUMMARY="Binutils for DJGPP toolchain"
 DESCRIPTION="Assember, linker, and other binary utilities required for the
